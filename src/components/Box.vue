@@ -1,51 +1,60 @@
 <template>
   <div>
-    <div class="box">
+    <div class="box" v-for="datas in getData" :key="datas.name">
       <span class="image">
-        <img
-          src="https://www.pngarts.com/files/3/Green-Dollar-PNG-Image-With-Transparent-Background.png"
-          alt=""
-        />
+        <img :src="datas" alt="" />
       </span>
-      <span class="title">Dolar</span>
-      <span class="price">7.7</span>
-      <span class="change">1.1 %</span>
-      <span class="status">+</span>
-    </div>
-
-    <div class="box">
-      <span class="image">
-        <img
-          src="https://www.pngarts.com/files/3/Green-Dollar-PNG-Image-With-Transparent-Background.png"
-          alt=""
-        />
-      </span>
-      <span class="title">Dolar</span>
-      <span class="price">7.7</span>
-      <span class="change">1.1 %</span>
+      <span class="title">{{ datas }}</span>
+      <span class="price">{{ datas.value }}</span>
+      <span class="change">{{ datas.change }}</span>
       <span class="status">+</span>
     </div>
   </div>
 </template>
 
 <script>
-import axios from 'axios';
-let headers = new Headers();
-
-headers.append('Content-Type', 'application/json');
-headers.append('Accept', 'application/json');
-headers.append('Origin', 'http://localhost:3000');
+import { mapGetters } from 'vuex';
 
 export default {
   name: 'Box',
-  mounted() {
-    axios
-      .get(
-        'https://koronacors.herokuapp.com/?https://dovizapi.herokuapp.com/api'
-      )
-      .then((response) => console.log(response.data));
+  computed: {
+    ...mapGetters(['getData']),
+    appointments_() {
+      this.$forceUpdate();
+      return this.$store.state.apiData;
+    },
   },
 };
+/* getData[data].image
+{{/*<div
+      class="box"
+      :v-if="
+        getData[data] !== empty &&
+          getData[data] !== undefined &&
+          getData[data] !== ''
+      "
+      v-for="data in Object.keys(getData)"
+      :key="data"
+    >
+      <span class="image">
+        <img :src="getData[data].image" alt="" />
+      </span>
+      <span class="title">{{ data }}</span>
+      <span
+        class="price"
+        :style="getData[data].change[0] === '-' ? 'color:red' : ''"
+        >{{ getData[data].value }}</span
+      >
+      <span
+        class="change"
+        :style="getData[data].change[0] === '-' ? 'color:red' : ''"
+        >{{ getData[data].change }}</span
+      >
+      <span
+        class="status"
+        :style="getData[data].change[0] === '-' ? 'color:red' : ''"
+        >{{ getData[data].change[0] === '-' ? '-' : '+' }}</span
+      >*/
 </script>
 
 <style scoped>
@@ -57,7 +66,6 @@ export default {
   width: 100%;
   height: 60px;
   border: 0.1px solid #888888;
-  /*box-shadow: 5px 8px 11px 5px #888888;*/
   border-radius: 25px;
   display: flex;
 }

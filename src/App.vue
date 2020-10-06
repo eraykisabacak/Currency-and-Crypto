@@ -8,23 +8,26 @@
 </template>
 
 <script>
-import Container from "./components/Container.vue";
-import Header from "./components/Header.vue";
-import Box from "./components/Box.vue";
+import Container from './components/Container.vue';
+import Header from './components/Header.vue';
+import Box from './components/Box.vue';
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
     Header,
     Container,
     Box,
+  },
+  created() {
+    this.$store.dispatch('getAPI');
   },
 };
 </script>
 
 <style>
 #app {
-  font-family: "Arial";
+  font-family: 'Arial';
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   margin-top: 60px;

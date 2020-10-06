@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "Container",
+  name: 'Container',
 };
 </script>
 
@@ -15,6 +15,6 @@ export default {
   width: 940px;
   margin-left: auto;
   margin-right: auto;
-  height: 100vh;
+  height: 100%;
 }
 </style>

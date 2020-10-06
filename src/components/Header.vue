@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Header</h1>
+    <h1>Currency and Crypto</h1>
     <ul>
       <li class="active">Döviz</li>
       <li>Borsa</li>
