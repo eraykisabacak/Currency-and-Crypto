@@ -1,28 +1,36 @@
 <template>
   <div>
-    <div class="box" v-for="datas in getData" :key="datas.name">
+    <div class="box" v-for="datas in getData" :key="datas">
       <span class="image">
-        <img :src="datas" alt="" />
+        <img :src="datas.image" alt="" />
       </span>
-      <span class="title">{{ datas }}</span>
+      <span class="title">{{ datas.name }}</span>
       <span class="price">{{ datas.value }}</span>
-      <span class="change">{{ datas.change }}</span>
-      <span class="status">+</span>
+      <span
+        class="change"
+        :style="datas.change[0] === '-' ? 'color:red' : ''"
+        >{{ datas.change }}</span
+      >
+      <span
+        class="status"
+        :style="datas.change[0] === '-' ? 'color:red' : ''"
+        >{{ datas.change[0] === "-" ? "-" : "+" }}</span
+      >
     </div>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters } from "vuex";
 
 export default {
-  name: 'Box',
+  name: "Box",
   computed: {
-    ...mapGetters(['getData']),
-    appointments_() {
-      this.$forceUpdate();
-      return this.$store.state.apiData;
-    },
+    ...mapGetters(["getData"]),
+    /*appointments_() {
+      console.log(this.$store.getters.getData);
+      return this.$store.getters.getData;
+    },*/
   },
 };
 /* getData[data].image

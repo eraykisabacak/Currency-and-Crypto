@@ -9,14 +9,7 @@ Vue.use(Vuex);
 
 export const store = new Vuex.Store({
   state: {
-    apiData: {
-      Bist100: {},
-      Dolar: {},
-      Euro: {},
-      Altın: {},
-      Petrol: {},
-      Bono: {},
-    },
+    apiData: [],
   },
   getters,
   actions,

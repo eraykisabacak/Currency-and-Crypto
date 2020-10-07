@@ -1,21 +1,21 @@
 export const updateData = (state, payload) => {
-  state.apiData.Bist100.value = payload.Bist100;
-  state.apiData.Bist100.change = payload.Bist100Degisim;
+  state.apiData.push(payload);
 
-  state.apiData.Altın.value = payload.Altın;
-  state.apiData.Altın.change = payload.AltınDegisim;
+  /*
+  state.Altın.value = payload.Altın;
+  state.Altın.change = payload.AltınDegisim;
 
-  state.apiData.Bono.value = payload.Bono;
-  state.apiData.Bono.change = payload.BonoDegisim;
+  state.Bono.value = payload.Bono;
+  state.Bono.change = payload.BonoDegisim;
 
-  state.apiData.Dolar.value = payload.Dolar;
-  state.apiData.Dolar.change = payload.DolarDegisim;
+  state.Dolar.value = payload.Dolar;
+  state.Dolar.change = payload.DolarDegisim;
 
-  state.apiData.Euro.value = payload.Euro;
-  state.apiData.Euro.change = payload.EuroDegisim;
+  state.Euro.value = payload.Euro;
+  state.Euro.change = payload.EuroDegisim;
 
-  state.apiData.Petrol.value = payload.Petrol;
-  state.apiData.Petrol.change = payload.PetrolDegisim;
+  state.Petrol.value = payload.Petrol;
+  state.Petrol.change = payload.PetrolDegisim;*/
 
   /* state.apiData.Bist100.name = 'Bist100';
   state.apiData.Bist100.image =
