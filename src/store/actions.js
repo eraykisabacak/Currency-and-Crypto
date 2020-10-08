@@ -30,3 +30,23 @@ export const getAPI = ({ commit }) => {
       }
     });
 };
+
+export const getAPIBorsa = ({ commit }) => {
+  Vue.http
+    .get(
+      'https://koronacors.herokuapp.com/?https://dovizapi.herokuapp.com/api/borsa'
+    )
+    .then((res) => {
+      var i;
+      let resultObj;
+      for (i = 0; i < res.body.result.length; i++) {
+        resultObj = {
+          name: res.body.result[i].Name,
+          value: res.body.result[i].Fiyat,
+          change: res.body.result[i].Degisim,
+          time: res.body.result[i].Saat,
+        };
+        commit('updateDataBorsa', resultObj);
+      }
+    });
+};

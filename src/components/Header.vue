@@ -2,10 +2,18 @@
   <div>
     <h1>Currency and Crypto</h1>
     <ul>
-      <li class="active">Döviz</li>
-      <li>Borsa</li>
-      <li>Altın</li>
-      <li>Crypto</li>
+      <router-link to="/" tag="li" active-class="active" exact
+        >Döviz</router-link
+      >
+      <router-link to="/borsa" tag="li" active-class="active" exact
+        >Borsa</router-link
+      >
+      <router-link to="/altin" tag="li" active-class="active" exact
+        >Altın</router-link
+      >
+      <router-link to="/crypto" tag="li" active-class="active" exact
+        >Crypto</router-link
+      >
     </ul>
   </div>
 </template>

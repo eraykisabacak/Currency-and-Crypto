@@ -1,33 +1,29 @@
 <template>
   <div id="app">
     <Container>
-      <Header></Header>
-      <Box></Box>
+      <router-view></router-view>
     </Container>
   </div>
 </template>
 
 <script>
-import Container from './components/Container.vue';
-import Header from './components/Header.vue';
-import Box from './components/Box.vue';
+import Container from "./components/Container.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    Header,
     Container,
-    Box,
   },
   created() {
-    this.$store.dispatch('getAPI');
+    this.$store.dispatch("getAPI");
+    this.$store.dispatch("getAPIBorsa");
   },
 };
 </script>
 
 <style>
 #app {
-  font-family: 'Arial';
+  font-family: "Arial";
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   margin-top: 60px;

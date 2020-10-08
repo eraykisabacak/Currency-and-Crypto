@@ -1,32 +1,26 @@
 <template>
   <div>
-    <div class="box" v-for="datas in getData" :key="datas.name">
-      <span class="image">
-        <img :src="datas.image" alt="" />
-      </span>
-      <span class="title">{{ datas.name }}</span>
+    <div class="box" v-for="(datas, key) in getDataBorsa" :key="key">
+      <span class="time">{{ datas.time[0] }}</span>
+      <span class="title">{{ datas.name[0] }}</span>
       <span class="price">{{ datas.value }}</span>
-      <span
-        class="change"
-        :style="datas.change[0] === '-' ? 'color:red' : ''"
-        >{{ datas.change }}</span
-      >
-      <span
-        class="status"
-        :style="datas.change[0] === '-' ? 'color:red' : ''"
-        >{{ datas.change[0] === '-' ? '-' : '+' }}</span
-      >
+      <span class="change" :style="datas.change[0] == '-' ? 'color:red' : ''">{{
+        datas.change
+      }}</span>
+      <span class="status" :style="datas.change[0] == '-' ? 'color:red' : ''">{{
+        datas.change[0] == "-" ? "-" : "+"
+      }}</span>
     </div>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters } from "vuex";
 
 export default {
-  name: 'ListBox',
+  name: "ListBoxBorsa",
   computed: {
-    ...mapGetters(['getData']),
+    ...mapGetters(["getDataBorsa"]),
   },
 };
 </script>
@@ -46,8 +40,8 @@ export default {
 .box:hover {
   border: 2px solid #3f241b;
 }
-.image {
-  width: 80px;
+.time {
+  width: 30px;
   margin: auto;
 }
 .title {
