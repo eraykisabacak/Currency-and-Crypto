@@ -50,3 +50,12 @@ export const getAPIBorsa = ({ commit }) => {
       }
     });
 };
+
+
+export const getAPIAltin = ({ commit }) => {
+  Vue.http
+    .get(
+      'https://koronacors.herokuapp.com/?https://dovizapi.herokuapp.com/api/altin'
+    )
+    .then((res) => commit('updateDataAltin', res.body));
+};

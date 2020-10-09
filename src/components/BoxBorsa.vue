@@ -41,7 +41,7 @@ export default {
   border: 2px solid #3f241b;
 }
 .time {
-  width: 30px;
+  width: 16px;
   margin: auto;
 }
 .title {

@@ -17,6 +17,7 @@ export default {
   created() {
     this.$store.dispatch("getAPI");
     this.$store.dispatch("getAPIBorsa");
+    this.$store.dispatch("getAPIAltin");
   },
 };
 </script>
