@@ -1,14 +1,14 @@
 <template>
   <div>
     <div class="box" v-for="(datas, key) in getDataBorsa" :key="key">
-      <span class="time">{{ datas.time[0] }}</span>
-      <span class="title">{{ datas.name[0] }}</span>
-      <span class="price">{{ datas.value }}</span>
-      <span class="change" :style="datas.change[0] == '-' ? 'color:red' : ''">{{
-        datas.change
+      <span class="time">{{ datas.Saat[0] }}</span>
+      <span class="title">{{ datas.Name[0] }}</span>
+      <span class="price">{{ datas.Fiyat }}</span>
+      <span class="change" :style="datas.Degisim[0] == '-' ? 'color:red' : ''">{{
+        datas.Degisim
       }}</span>
-      <span class="status" :style="datas.change[0] == '-' ? 'color:red' : ''">{{
-        datas.change[0] == "-" ? "-" : "+"
+      <span class="status" :style="datas.Degisim[0] == '-' ? 'color:red' : ''">{{
+        datas.Degisim[0] == "-" ? "-" : "+"
       }}</span>
     </div>
   </div>
@@ -77,3 +77,15 @@ export default {
   border-radius: 50%;
 }
 </style>
+<!--<div class="box" v-for="(datas, key) in getDataBorsa" :key="key">
+      {{datas}}
+      <span class="time">{{ datas.time[0] }}</span>
+      <span class="title">{{ datas.name[0] }}</span>
+      <span class="price">{{ datas.value }}</span>
+      <span class="change" :style="datas.change[0] == '-' ? 'color:red' : ''">{{
+        datas.change
+      }}</span>
+      <span class="status" :style="datas.change[0] == '-' ? 'color:red' : ''">{{
+        datas.change[0] == "-" ? "-" : "+"
+      }}</span>
+    </div>-->

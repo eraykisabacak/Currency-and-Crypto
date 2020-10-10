@@ -3,7 +3,8 @@ export const updateData = (state, payload) => {
 };
 
 export const updateDataBorsa = (state, payload) => {
-  state.apiDataBorsa.push(payload);
+ // state.apiDataBorsa.push(payload);
+  state.apiDataBorsa = payload;
 };
 
 export const updateDataAltin = (state, payload) => {

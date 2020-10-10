@@ -16,8 +16,11 @@ export default {
   },
   created() {
     this.$store.dispatch("getAPI");
-    this.$store.dispatch("getAPIBorsa");
+    this.interval = setInterval(() => {
     this.$store.dispatch("getAPIAltin");
+    this.$store.dispatch("getAPIBorsa");
+    }, 1000);
+
   },
 };
 </script>
