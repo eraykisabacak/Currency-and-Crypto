@@ -12,6 +12,7 @@ export const store = new Vuex.Store({
     apiData: [],
     apiDataBorsa: {},
     apiDataAltin: {},
+    apiDataGumus: {},
   },
   getters,
   actions,

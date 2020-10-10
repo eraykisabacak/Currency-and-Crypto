@@ -1,19 +1,19 @@
 <template>
   <div>
     <Header></Header>
-    <BoxAltin></BoxAltin>
+    <BoxGumus></BoxGumus>
   </div>
 </template>
 
 <script>
 import Header from '../components/Header';
-import BoxAltin from '../components/BoxAltin.vue';
+import BoxGumus from '../components/BoxGumus.vue';
 
 export default {
-  name: 'Altin',
+  name: 'Gumus',
   components: {
     Header,
-    BoxAltin,
+    BoxGumus,
   },
 };
 </script>

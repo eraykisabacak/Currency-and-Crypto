@@ -49,3 +49,11 @@ export const getAPIAltin = ({ commit }) => {
     )
     .then((res) => commit('updateDataAltin', res.body));
 };
+
+export const getAPIGumus = ({ commit }) => {
+  Vue.http
+    .get(
+      'https://koronacors.herokuapp.com/?https://dovizapi.herokuapp.com/api/gumus'
+    )
+    .then((res) => commit('updateDataGumus', res.body));
+};
