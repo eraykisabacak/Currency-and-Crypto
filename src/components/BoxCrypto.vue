@@ -1,14 +1,18 @@
 <template>
   <div>
-    <div class="box" v-for="(datas,key) in getDataGumus" :key="key">
-      <span class="title">{{ ChangeName(key)  }}</span>
-      <span class="price">{{ datas.Alis }}</span>
-      <span class="price">{{ datas.Satis }}</span>
+    <div class="box" v-for="(datas,key) in getDataCrypto" :key="key">
+      <span class="rank">{{ datas.Rank }}</span>
+      <img class="image" :src="datas.Image" alt="">
+      <span class="title">{{ datas.Name }}
+        <span class="sembol">{{ datas.Sembol }}</span>
+      </span>
+      
+      <span class="price">{{ datas.Price }}</span>
       <span
-        class="change" :style="datas.Degisim[2] == '-' ? 'color:red' : ''">{{ datas.Degisim }}</span>
+        class="change" :style="datas.Change7d[0] == '-' ? 'color:red' : ''">{{ datas.Change7d }}</span>
       <span
-        class="time"
-        >{{ datas.Saat }}</span
+        class="change"
+        >{{ datas.Change24h }}</span
       >
     </div>
   </div>
@@ -18,29 +22,26 @@
 import { mapGetters } from 'vuex';
 
 export default {
-  name: 'ListBoxGumus',
+  name: 'ListBoxCrypto',
   computed: {
-    ...mapGetters(['getDataGumus']),
+    ...mapGetters(['getDataCrypto']),
     },
   methods:{
-    ChangeName(key){
-      if(key == "GumusGramSpot"){
-        return "Gümüş Gram Spot";
-      }else if(key == "Gumus"){
-        return "Gümüş";
-      }else if(key == "GumusEuro"){
-        return "Gümüş / €";
-      }else if(key == "GumusGramDolar"){
-        return "Gümüş / $";
-      }else if(key == "GumusGramTurkLirasi"){
-        return "Gümüş Gram / ₺";
-      }
-    }
+    
   }
 };
 </script>
 
 <style scoped>
+.rank{
+  width: 5%;
+  margin: auto;
+}
+.title .sembol{
+  font-size: 12px;
+  width: 5%;
+  margin: auto;
+}
 .box:first-child {
   margin-top: 45px;
 }
@@ -56,8 +57,9 @@ export default {
   border: 2px solid #3f241b;
 }
 .image {
-  width: 80px;
+  width: 50px;
   margin: auto;
+  margin-left: 5px;
 }
 .title {
   font-size: 32px;

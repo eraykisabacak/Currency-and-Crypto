@@ -5,7 +5,7 @@
       <span class="price">{{ datas.Alis }}</span>
       <span class="price">{{ datas.Satis }}</span>
       <span
-        class="change">{{ datas.Degisim }}</span>
+        class="change" :style="datas.Degisim[2] == '-' ? 'color:red' : ''">{{ datas.Degisim }}</span>
       <span
         class="time"
         >{{ datas.Saat }}</span

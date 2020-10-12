@@ -14,4 +14,8 @@ export const updateDataGumus = (state, payload) => {
   state.apiDataGumus = payload;
 };
 
+export const updateDataCrypto = (state, payload) => {
+  state.apiDataCrypto = payload;
+};
+
 

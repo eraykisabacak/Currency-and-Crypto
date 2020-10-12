@@ -14,8 +14,8 @@
       <router-link to="/gumus" tag="li" active-class="active" exact
         >Gümüş</router-link
       >
-     <!-- <router-link to="/crypto" tag="li" active-class="active" exact
-        >Crypto</router-link>-->
+     <router-link to="/crypto" tag="li" active-class="active" exact
+        >Crypto</router-link>
     </ul>
   </div>
 </template>
@@ -26,7 +26,7 @@ export default {};
 
 <style scoped>
 ul {
-  width: 50%;
+  width: 65%;
   margin-left: auto;
   margin-right: auto;
   border: 0.5px solid black;

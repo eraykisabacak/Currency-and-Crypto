@@ -57,3 +57,11 @@ export const getAPIGumus = ({ commit }) => {
     )
     .then((res) => commit('updateDataGumus', res.body));
 };
+
+export const getAPICrypto = ({ commit }) => {
+  Vue.http
+    .get(
+      'https://koronacors.herokuapp.com/?https://dovizapi.herokuapp.com/api/kriptopara'
+    )
+    .then((res) => commit('updateDataCrypto', Object.assign(res.body.result)));
+};
