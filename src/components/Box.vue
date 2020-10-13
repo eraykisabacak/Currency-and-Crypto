@@ -5,7 +5,7 @@
         <img :src="datas.image" alt="" />
       </span>
       <span class="title">{{ datas.name }}</span>
-      <span class="price">{{ datas.value }}</span>
+      <span class="price">{{ datas.value }} ₺</span>
       <span
         class="change"
         :style="datas.change[0] === '-' ? 'color:red' : ''"
