@@ -21,7 +21,7 @@ export default {
       this.$store.dispatch("getAPIBorsa");
       this.$store.dispatch("getAPIGumus");
       this.$store.dispatch("getAPICrypto");
-    }, 1000);
+    }, 60000);
 
   },
 };
