@@ -26,8 +26,8 @@ export const getAPI = ({ commit }) => {
       }
       for (i = 0; i < result.length; i++) {
         result[i].image = images[i];
-        commit('updateData', result[i]);
       }
+        commit('updateData', result);
     });
 };
 

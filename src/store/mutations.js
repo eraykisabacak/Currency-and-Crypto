@@ -1,5 +1,5 @@
 export const updateData = (state, payload) => {
-  state.apiData.push(payload);
+  state.apiData = payload;
 };
 
 export const updateDataBorsa = (state, payload) => {

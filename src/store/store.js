@@ -9,7 +9,7 @@ Vue.use(Vuex);
 
 export const store = new Vuex.Store({
   state: {
-    apiData: [],
+    apiData: {},
     apiDataBorsa: {},
     apiDataAltin: {},
     apiDataGumus: {}, 
