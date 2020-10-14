@@ -14,6 +14,7 @@ export const store = new Vuex.Store({
     apiDataAltin: {},
     apiDataGumus: {}, 
     apiDataCrypto: {},
+    time: null
   },
   getters,
   actions,

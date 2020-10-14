@@ -7,3 +7,5 @@ export const getDataAltin = (state) => state.apiDataAltin;
 export const getDataGumus = (state) => state.apiDataGumus;
 
 export const getDataCrypto = (state) => state.apiDataCrypto;
+
+export const getTime = (state) => state.time;
