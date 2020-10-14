@@ -2,7 +2,7 @@ import Vue from 'vue';
 
 export const getAPI = ({ commit }) => {
   Vue.http
-    .get('https://koronacors.herokuapp.com/?https://dovizapi.herokuapp.com/api')
+    .get('https://dovizapi.herokuapp.com/api')
     .then((res) => {
       let names = Object.keys(res.body[0]);
       let images = [
@@ -34,7 +34,7 @@ export const getAPI = ({ commit }) => {
 export const getAPIBorsa = ({ commit }) => {
   Vue.http
     .get(
-      'https://koronacors.herokuapp.com/?https://dovizapi.herokuapp.com/api/borsa'
+      'https://dovizapi.herokuapp.com/api/borsa'
     )
     .then((res) => {
       commit('updateDataBorsa', Object.assign(res.body.result));
@@ -45,7 +45,7 @@ export const getAPIBorsa = ({ commit }) => {
 export const getAPIAltin = ({ commit }) => {
   Vue.http
     .get(
-      'https://koronacors.herokuapp.com/?https://dovizapi.herokuapp.com/api/altin'
+      'https://dovizapi.herokuapp.com/api/altin'
     )
     .then((res) => commit('updateDataAltin', res.body));
 };
@@ -53,7 +53,7 @@ export const getAPIAltin = ({ commit }) => {
 export const getAPIGumus = ({ commit }) => {
   Vue.http
     .get(
-      'https://koronacors.herokuapp.com/?https://dovizapi.herokuapp.com/api/gumus'
+      'https://dovizapi.herokuapp.com/api/gumus'
     )
     .then((res) => commit('updateDataGumus', res.body));
 };
@@ -61,7 +61,7 @@ export const getAPIGumus = ({ commit }) => {
 export const getAPICrypto = ({ commit }) => {
   Vue.http
     .get(
-      'https://koronacors.herokuapp.com/?https://dovizapi.herokuapp.com/api/kriptopara'
+      'https://dovizapi.herokuapp.com/api/kriptopara'
     )
     .then((res) => commit('updateDataCrypto', Object.assign(res.body.result)));
 };
