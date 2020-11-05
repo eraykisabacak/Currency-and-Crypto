@@ -33,7 +33,7 @@ export const getAPI = ({ commit }) => {
 
 export const getAPIWebSocket = async ({ commit }) => {
   let connection;
-  connection = await new WebSocket('ws://dovizapi.herokuapp.com/');
+  connection = await new WebSocket('wss://dovizapi.herokuapp.com/');
 
   var msg;
 
