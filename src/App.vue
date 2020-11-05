@@ -13,6 +13,11 @@ import Container from './components/Container.vue';
 
 export default {
   name: 'App',
+  data: function() {
+    return {
+      connection: null
+    }
+  },
   components: {
     Container,
   },
@@ -20,17 +25,19 @@ export default {
       ...mapGetters(['getTime'])
   },
   created() {
-    this.$store.dispatch('getAPI');
-    this.$store.dispatch('getAPIAltin');
-    this.$store.dispatch('getAPIBorsa');
-    this.$store.dispatch('getAPIGumus');
-    this.$store.dispatch('getAPICrypto');
+    //this.$store.dispatch('getAPI');
+    //this.$store.dispatch('getAPIAltin');
+  //  this.$store.dispatch('getAPIBorsa');
+  //  this.$store.dispatch('getAPIGumus');
+   // this.$store.dispatch('getAPICrypto');
+  
+  this.$store.dispatch('getAPIWebSocket');
     this.interval = setInterval(() => {
-      this.$store.dispatch('getAPI');
-      this.$store.dispatch('getAPIAltin');
-      this.$store.dispatch('getAPIBorsa');
-      this.$store.dispatch('getAPIGumus');
-      this.$store.dispatch('getAPICrypto');
+      //this.$store.dispatch('getAPI');
+      //this.$store.dispatch('getAPIAltin');
+      //this.$store.dispatch('getAPIBorsa');
+      //this.$store.dispatch('getAPIGumus');
+      //this.$store.dispatch('getAPICrypto');
     }, 60000);
   },
 };
