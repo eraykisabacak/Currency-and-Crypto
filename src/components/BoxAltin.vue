@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Loading :data="getDataAltin"></Loading>
     <div class="box" v-for="(datas,key) in getDataAltin" :key="key">
       <span class="title">{{ ChangeName(key) }}</span>
       <span class="price">{{ datas.Alis }}</span>
@@ -16,9 +17,11 @@
 
 <script>
 import { mapGetters } from 'vuex';
+import Loading from "@/components/Loading.vue";
 
 export default {
   name: 'ListBoxAltin',
+  components: {Loading},
   computed: {
     ...mapGetters(['getDataAltin']),
     },

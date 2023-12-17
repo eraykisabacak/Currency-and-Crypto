@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Loading :data="getData"></Loading>
     <div class="box" v-for="datas in getData" :key="datas.name">
       <span class="image">
         <img :src="datas.image" alt="" />
@@ -22,9 +23,11 @@
 
 <script>
 import { mapGetters } from 'vuex';
+import Loading from "@/components/Loading.vue";
 
 export default {
   name: 'ListBox',
+  components: {Loading},
   computed: {
     ...mapGetters(['getData']),
   },

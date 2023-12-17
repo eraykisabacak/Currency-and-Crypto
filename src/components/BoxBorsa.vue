@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Loading :data="getDataBorsa"></Loading>
     <div class="box" v-for="(datas, key) in getDataBorsa" :key="key">
       <span class="time">{{ datas.Saat[0] }}</span>
       <span class="title">{{ datas.Name[0] }}</span>
@@ -16,9 +17,11 @@
 
 <script>
 import { mapGetters } from "vuex";
+import Loading from "@/components/Loading.vue";
 
 export default {
   name: "ListBoxBorsa",
+  components: {Loading},
   computed: {
     ...mapGetters(["getDataBorsa"]),
   },

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Loading :data="getDataGumus"></Loading>
     <div class="box" v-for="(datas,key) in getDataGumus" :key="key">
       <span class="title">{{ ChangeName(key)  }}</span>
       <span class="price">{{ datas.Alis }}</span>
@@ -16,9 +17,11 @@
 
 <script>
 import { mapGetters } from 'vuex';
+import Loading from "@/components/Loading.vue";
 
 export default {
   name: 'ListBoxGumus',
+  components: {Loading},
   computed: {
     ...mapGetters(['getDataGumus']),
     },

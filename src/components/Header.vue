@@ -14,8 +14,8 @@
       <router-link to="/gumus" tag="li" active-class="active" exact
         >Gümüş</router-link
       >
-     <router-link to="/crypto" tag="li" active-class="active" exact
-        >Crypto</router-link>
+     <!--<router-link to="/crypto" tag="li" active-class="active" exact
+        >Crypto</router-link>-->
     </ul>
   </div>
 </template>

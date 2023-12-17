@@ -3,7 +3,7 @@
 ## [API](https://github.com/eraykisabacak/Doviz-API)
 ## [Blog](https://eraykisabacak.com/nodejs-ve-vuejs-ile-doviz-kripto-altin-gumus-canli-degerleri/)
 
-## [API](https://dovizapi.herokuapp.com/api)
+## [API](https://doviz-api.onrender.com/api-docs/)
 ## [App](https://currency-and-crypto.vercel.app/)
 
 
